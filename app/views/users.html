@@ -1,0 +1,7 @@
+<div class="container"  ng-init="init()">
+  <h1>People Search</h1>
+  <input class="col-xs-12 " type="text" ng-model="username" placeholder="Enter your search term"/>
+  <div class="col-xs-12 col-md-6 col-sm-6 col-lg-4 text-center"ng-repeat="user in userList | filter:{name:username}">
+    <img ng-src="{{user.imageUrl}}"></img><p class="name">{{user.name}}</p>
+  </div>
+</div>
